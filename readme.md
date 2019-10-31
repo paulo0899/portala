@@ -17,9 +17,9 @@ Para fazer tal monitoramento, o Portal A+, possui uma área de Acesso (Login), o
     - Disciplinas;
 
 ## Desenvolvedores: 
-  - Matheus Prado: [link github]
-  - Paulo Ricardo: [link github] 
+  - Matheus Prado: https://github.com/matheusprado174
+  - Paulo Ricardo: https://github.com/paulo0899
   - Vinicyus Reis: [link github] 
   - Leandro Alcoforado: https://github.com/zLetsu
   - Matheus Fernando: [link github] 
-  - Jhonathan Xavier: [link github]
+  - Jhonathan Xavier: https://github.com/jonathan-xavier
