@@ -55,8 +55,14 @@
             android:id="@+id/buttonImagem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Adicionar Imagem"
-            android:onClick="tirarFoto"/>
+            android:onClick="tirarFoto"
+            android:text="Adicionar Imagem (camera)" />
+
+        <Button
+            android:id="@+id/buttonAdcImgGaleria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="adicionar imagem (galeria)" />
 
         <EditText
             android:id="@+id/editTextData"
