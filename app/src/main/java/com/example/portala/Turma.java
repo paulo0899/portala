@@ -11,9 +11,6 @@ public class Turma {
     private ArrayList<Aluno> aluno;
 
     public Turma() {
-    }
-
-    public Turma(ArrayList<Disciplina> disciplina, ArrayList<Aluno> aluno) {
         this.disciplina = new ArrayList<>();
         this.aluno = new ArrayList<>();
     }

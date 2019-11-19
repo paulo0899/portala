@@ -10,9 +10,6 @@ public class Disciplina {
     private ArrayList<Turma> turma;
 
     public Disciplina() {
-    }
-
-    public Disciplina(Nota nota, ArrayList<Turma> turma) {
         this.nota = new Nota();
         this.turma = new ArrayList<>();
     }

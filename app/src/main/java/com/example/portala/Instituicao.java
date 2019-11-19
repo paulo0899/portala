@@ -12,9 +12,6 @@ public class Instituicao {
     private ArrayList<Aluno> aluno;
 
     public Instituicao() {
-    }
-
-    public Instituicao(ArrayList<Responsavel> responsavel, ArrayList<Evento> evento, ArrayList<Aluno> aluno) {
         this.responsavel = new ArrayList<>();
         this.evento = new ArrayList<>();
         this.aluno = new ArrayList<>();

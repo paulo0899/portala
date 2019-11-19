@@ -13,9 +13,6 @@ public class Aluno {
     private ArrayList<Nota> nota;
 
     public Aluno() {
-    }
-
-    public Aluno(Responsavel responsavel, Turma turma, Instituicao instituicao, ArrayList<Nota> nota) {
         this.responsavel = new Responsavel();
         this.turma = new Turma();
         this.instituicao = new Instituicao();

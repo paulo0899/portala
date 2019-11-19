@@ -16,9 +16,6 @@ public class Nota {
     private ArrayList<Disciplina> disciplina;
 
     public Nota() {
-    }
-
-    public Nota(Aluno aluno, ArrayList<Disciplina> disciplina) {
         this.aluno = new Aluno();
         this.disciplina = new ArrayList<>();
     }

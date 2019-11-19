@@ -13,9 +13,6 @@ public class Responsavel {
     private Instituicao instituicao;
 
     public Responsavel() {
-    }
-
-    public Responsavel(ArrayList<Aluno> aluno, Instituicao instituicao) {
         this.aluno = new ArrayList<>();
         this.instituicao = new Instituicao();
     }

@@ -8,9 +8,6 @@ public class Evento {
     private Instituicao instituicao;
 
     public Evento() {
-    }
-
-    public Evento(Instituicao instituicao) {
         this.instituicao = new Instituicao();
     }
 
