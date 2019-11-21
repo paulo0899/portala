@@ -20,6 +20,17 @@ public class LoginAdministradorFragment extends Fragment {
     private EditText editTextEmailAdministracao;
     private EditText editTextSenhaAdministracao;
 
+    private String campoEmailAdm = editTextEmailAdministracao.getText().toString();
+    private String campoSenhaAdm = editTextSenhaAdministracao.getText().toString();
+
+    public String getCampoEmailAdm() {
+        return campoEmailAdm;
+    }
+
+    public String getCampoSenhaAdm() {
+        return campoSenhaAdm;
+    }
+
     public LoginAdministradorFragment() {
         // Required empty public constructor
     }

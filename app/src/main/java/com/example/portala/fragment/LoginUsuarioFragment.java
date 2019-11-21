@@ -20,6 +20,17 @@ public class LoginUsuarioFragment extends Fragment {
     private EditText editTextEmailUsuario;
     private EditText editTextSenhaUsuario;
 
+    private String campoEmailUsuario = editTextEmailUsuario.getText().toString();
+    private String campoSenhaUsuario = editTextEmailUsuario.getText().toString();
+
+    public String getCampoEmailUsuario() {
+        return campoEmailUsuario;
+    }
+
+    public String getCampoSenhaUsuario() {
+        return campoSenhaUsuario;
+    }
+
     public LoginUsuarioFragment() {
         // Required empty public constructor
     }
