@@ -2,18 +2,19 @@ package com.example.portala.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.portala.R;
-import com.example.portala.fragment.LoginAdministradorFragment;
-import com.example.portala.fragment.LoginUsuarioFragment;
 import com.example.portala.helper.ConfiguracaoFirebase;
+import com.example.portala.helper.UsuarioFirebase;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,9 +23,12 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button buttonUsuario, buttonAdministracao, buttonAcessar;
-    private LoginUsuarioFragment loginUsuarioFragment;
-    private LoginAdministradorFragment loginAdministradorFragment;
+    private Button buttonAcessar;
+    private EditText editTextEmail;
+    private EditText editTextSenha;
+    private RadioButton radioButtonResponsavel;
+    private RadioButton radioButtonInstituicao;
+    private RadioGroup radioGroupAcesso;
 
     private FirebaseAuth autenticacao;
 
@@ -34,60 +38,36 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
 
+        //Chamando componentes por id:
+        buttonAcessar = findViewById(R.id.buttonAcessar);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextSenha = findViewById(R.id.editTextSenha);
+        radioButtonResponsavel = findViewById(R.id.radioButtonUsuario);
+        radioButtonInstituicao = findViewById(R.id.radioButtonAdministracao);
+        radioGroupAcesso = findViewById(R.id.radioGroupAcesso);
+
+        //Configurando autenticação:
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
 
+        //Verificando autenticação;
         verificarUsuarioLogado();
 
-        buttonUsuario = findViewById(R.id.buttonAcessoUsuario);
-        buttonAdministracao = findViewById(R.id.buttonAcessoAdministracao);
-        buttonAcessar = findViewById(R.id.buttonAcessar);
-
-        //Carregando os Fragments:
-        loginUsuarioFragment = new LoginUsuarioFragment();
-
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frameConteudoLogin, loginUsuarioFragment);
-        transaction.commit();
-
-        buttonAdministracao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                loginAdministradorFragment = new LoginAdministradorFragment();
-
-                FragmentTransaction transactionAdministracao = getSupportFragmentManager().beginTransaction();
-                transactionAdministracao.replace(R.id.frameConteudoLogin, loginAdministradorFragment);
-                transactionAdministracao.commit();
-            }
-        });
-
-        buttonUsuario.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                loginUsuarioFragment = new LoginUsuarioFragment();
-
-                FragmentTransaction transactionUsuario = getSupportFragmentManager().beginTransaction();
-                transactionUsuario.replace(R.id.frameConteudoLogin, loginUsuarioFragment);
-                transactionUsuario.commit();
-            }
-        });
+        //Verificando tipo de acesso:
+        verificaRadioGroup();
 
         //Evento botão acessar:
         buttonAcessar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String emailUsuario = loginUsuarioFragment.getCampoEmailUsuario();
-                String emailAdm = loginAdministradorFragment.getCampoEmailAdm();
-                String senhaUsuario = loginUsuarioFragment.getCampoSenhaUsuario();
-                String senhaAdm = loginAdministradorFragment.getCampoSenhaAdm();
+                String email = editTextEmail.getText().toString();
+                String senha = editTextSenha.getText().toString();
 
-                if ( !emailUsuario.isEmpty() ){
-                    if (!senhaUsuario.isEmpty()){
-                        if (buttonAcessar.isPressed()){
+                if (!email.isEmpty()){
+                    if (!senha.isEmpty()){
+                        if (radioButtonResponsavel.isChecked()){
                             autenticacao.signInWithEmailAndPassword(
-                                    emailUsuario, senhaUsuario
+                                    email, senha
                             ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -95,7 +75,9 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText(LoginActivity.this,
                                                 "Logado com sucesso!",
                                                 Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(getApplicationContext(), PrincipalActivity.class));
+                                        String tipoUsuario = getTipoUsuario();
+                                        UsuarioFirebase.atualizarTipoUsuario(tipoUsuario);
+                                        abrirTelaPrincipal(tipoUsuario);
                                     }else{
                                         Toast.makeText(LoginActivity.this,
                                                 "Erro ao fazer login: " + task.getException(),
@@ -104,13 +86,9 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             });
 
-                        }
-                    }
-                }else if (!emailAdm.isEmpty()){
-                    if (!senhaAdm.isEmpty()){
-                        if (buttonAcessar.isPressed()){
+                        }else if (radioButtonInstituicao.isChecked()){
                             autenticacao.signInWithEmailAndPassword(
-                                    emailAdm, senhaAdm
+                                    email, senha
                             ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -118,7 +96,9 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText(LoginActivity.this,
                                                 "Logado com sucesso!",
                                                 Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(getApplicationContext(), PrincipalAdministracaoActivity.class));
+                                        String tipoUsuario = getTipoUsuario();
+                                        UsuarioFirebase.atualizarTipoUsuario(tipoUsuario);
+                                        abrirTelaPrincipal(tipoUsuario);
                                     }else{
                                         Toast.makeText(LoginActivity.this,
                                                 "Erro ao fazer login: " + task.getException(),
@@ -126,7 +106,6 @@ public class LoginActivity extends AppCompatActivity {
                                     }
                                 }
                             });
-
                         }
                     }
                 }else {
@@ -134,19 +113,50 @@ public class LoginActivity extends AppCompatActivity {
                             "Preencha a senha!",
                             Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
 
     }
 
+    private void verificaRadioGroup(){
+        radioGroupAcesso.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i == R.id.radioButtonUsuario){
+
+                }else if (i == R.id.radioButtonAdministracao){
+
+                }else{
+                    Toast.makeText(LoginActivity.this,
+                            "Seleciona o tipo de acesso.",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
     private void verificarUsuarioLogado(){
         FirebaseUser usuarioAtual = autenticacao.getCurrentUser();
         if (usuarioAtual != null){
+            String tipoUsuario = usuarioAtual.getDisplayName();
+            abrirTelaPrincipal(tipoUsuario);
         }else{
-            Toast.makeText(LoginActivity.this,
-                    "Nenhum usuário logado.",
-                    Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private String getTipoUsuario(){
+        String tipoUsuario = "";
+        if (radioButtonResponsavel.isChecked()){
+            tipoUsuario = radioButtonResponsavel.isChecked() ? "U" : "A";
+        }
+        return tipoUsuario;
+    }
+
+    private void abrirTelaPrincipal(String tipoUsuario){
+        if (tipoUsuario.equals("U")){
+            startActivity(new Intent(getApplicationContext(), PrincipalActivity.class));
+        }else{
+            startActivity(new Intent(getApplicationContext(), PrincipalAdministracaoActivity.class));
         }
     }
 
