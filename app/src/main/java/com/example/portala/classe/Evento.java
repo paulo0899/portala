@@ -6,6 +6,7 @@ public class Evento {
     private String tituloEvento;
     private String descricaoEvento;
     private Instituicao instituicao;
+    private byte[] imagemEvento;
 
     public Evento() {
         this.instituicao = new Instituicao();
@@ -41,5 +42,13 @@ public class Evento {
 
     public void setInstituicao(Instituicao instituicao) {
         this.instituicao = instituicao;
+    }
+
+    public byte[] getImagemEvento() {
+        return imagemEvento;
+    }
+
+    public void setImagemEvento(byte[] imagemEvento) {
+        this.imagemEvento = imagemEvento;
     }
 }
