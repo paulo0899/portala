@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_evento);
 
         Button buttonGaleria = (Button) findViewById(R.id.buttonAdcImgGaleria);
         buttonGaleria.setOnClickListener(new View.OnClickListener() {
