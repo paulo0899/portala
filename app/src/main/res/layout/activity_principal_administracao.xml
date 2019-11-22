@@ -4,6 +4,138 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".activity.PrincipalAdministracaoActivity">
+
+    <ImageView
+        android:id="@+id/imageViewInstituicaoPerfil"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewInstituicaoEvento"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_perfil_asset_24dp" />
+
+    <ImageView
+        android:id="@+id/imageViewInstituicaoEvento"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewInstituicaoInicio"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewInstituicaoPerfil"
+        app:srcCompat="@drawable/ic_event_note_asset_24dp" />
+
+    <ImageView
+        android:id="@+id/imageViewInstituicaoInicio"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewInstituicaoAluno"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewInstituicaoEvento"
+        app:srcCompat="@drawable/ic_home_asset_24dp" />
+
+    <ImageView
+        android:id="@+id/imageViewInstituicaoAluno"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewInstituicaoContato"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewInstituicaoInicio"
+        app:srcCompat="@drawable/ic_notes_asset_24dp" />
+
+    <ImageView
+        android:id="@+id/imageViewInstituicaoContato"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewInstituicaoAluno"
+        app:srcCompat="@drawable/ic_contact_asset_24dp" />
+
+    <TextView
+        android:id="@+id/textViewInstituicaoPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Perfil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewInstituicaoPerfil"
+        app:layout_constraintStart_toStartOf="@+id/imageViewInstituicaoPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewInstituicaoPerfil" />
+
+    <TextView
+        android:id="@+id/textViewInstituicaoEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Eventos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewInstituicaoEvento"
+        app:layout_constraintStart_toStartOf="@+id/imageViewInstituicaoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewInstituicaoEvento" />
+
+    <TextView
+        android:id="@+id/textViewInstituicaoInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Início"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewInstituicaoInicio"
+        app:layout_constraintStart_toStartOf="@+id/imageViewInstituicaoInicio"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewInstituicaoInicio" />
+
+    <TextView
+        android:id="@+id/textViewInstituicaoAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Aluno"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewInstituicaoAluno"
+        app:layout_constraintStart_toStartOf="@+id/imageViewInstituicaoAluno"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewInstituicaoAluno" />
+
+    <TextView
+        android:id="@+id/textViewInstituicaoContato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Contato"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewInstituicaoContato"
+        app:layout_constraintStart_toStartOf="@+id/imageViewInstituicaoContato"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewInstituicaoContato" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView2"
+        android:layout_width="411dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewInstituicaoInicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameInstituicaoConteudoPrincipal"
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

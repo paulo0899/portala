@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:ems="10"
-        android:hint="Digite seu email"
+        android:hint="Digite o email da instituição"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Digite sua senha"
+        android:hint="Digite a senha da instituição"
         android:inputType="textPassword"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -88,29 +88,5 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/editTextSenha" />
-
-    <TextView
-        android:id="@+id/textViewRodape"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Acessar como"
-        android:textColor="@color/colorLabelRodape"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAcessar" />
-
-    <TextView
-        android:id="@+id/textViewAcessoInstituicao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" Instituição."
-        android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAcessar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
