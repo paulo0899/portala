@@ -11,7 +11,17 @@
         android:roundIcon="@mipmap/baby"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.AlterarSenhaInstituicaoActivity" />
+        <activity android:name=".activity.AlterarSenhaActivity" />
+        <activity android:name=".activity.LoginInstituicaoActivity" />
+        <activity android:name=".activity.PrincipalAdministracaoActivity" />
+        <activity android:name=".activity.PrincipalActivity" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
