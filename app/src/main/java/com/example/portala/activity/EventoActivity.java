@@ -1,4 +1,4 @@
-package com.example.portala;
+package com.example.portala.activity;
 
 import android.Manifest;
 import android.content.Intent;
@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import com.example.portala.R;
 
 
 public class EventoActivity extends AppCompatActivity {
