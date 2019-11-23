@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FrameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
@@ -13,9 +14,11 @@
         android:background="@android:color/white">
 
         <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:background="@android:color/white"
@@ -26,97 +29,45 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <Button
+                android:id="@+id/buttonNota"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="50dp"
+                android:layout_weight="20"
+                android:background="@android:color/white"
+                android:drawableLeft="@drawable/ic_pontuation_asset_24dp"
+                android:paddingLeft="5dp"
+                android:text="  Notas"
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
 
-                <LinearLayout
-                    android:id="@+id/linearLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@android:color/white"
-                    android:baselineAligned="false"
-                    android:orientation="horizontal"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:id="@+id/imageViewIconeNotas"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_pontuation_asset_24dp" />
-
-                    <Button
-                        android:id="@+id/buttonNota"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_weight="20"
-                        android:background="@android:color/white"
-                        android:text="  Notas"
-                        android:textAlignment="textStart"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-                <com.google.android.material.bottomnavigation.BottomNavigationView
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@color/colorAccent"
-                    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-                    app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0">
-
-                </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-                <LinearLayout
-                    android:id="@+id/linearLayout2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@android:color/white"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-                    <ImageView
-                        android:id="@+id/imageViewIconeFrequencia"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_frequence_asset_24dp" />
-
-                    <Button
-                        android:id="@+id/buttonFrequencia"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_weight="20"
-                        android:background="@android:color/white"
-                        android:text="  Frequência"
-                        android:textAlignment="textStart"
-                        android:textSize="18sp" />
-                </LinearLayout>
-
-                <com.google.android.material.bottomnavigation.BottomNavigationView
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@color/colorAccent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/buttonFrequencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:background="@android:color/white"
+                android:drawableLeft="@drawable/ic_frequence_list_asset_24dp"
+                android:paddingLeft="5dp"
+                android:text="  Frequência"
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
 
         </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameConteudoAluno"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

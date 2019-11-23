@@ -79,6 +79,7 @@ public class PrincipalActivity extends AppCompatActivity {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.frameConteudoPrincipal, alunoFragment);
                 transaction.commit();
+
             }
         });
 
