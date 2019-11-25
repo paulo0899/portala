@@ -1,6 +1,7 @@
 package com.example.portala.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,6 +14,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.portala.R;
+import com.example.portala.activity.AlterarResponsavelActivity;
+import com.example.portala.activity.CadastrarResponsavelActivity;
+import com.example.portala.activity.ListarResponsavelActivity;
+import com.example.portala.activity.RemoverResponsavelActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,6 +60,34 @@ public class PerfilInstituicaoFragment extends Fragment {
         buttonListarResp = view.findViewById(R.id.buttonListarResponsavel);
         buttonAlterarSenhaInst = view.findViewById(R.id.buttonAlterarSenhaInst);
         buttonDeslogarInst = view.findViewById(R.id.buttonDeslogarInst);
+
+        buttonCadastrarResp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), CadastrarResponsavelActivity.class));
+            }
+        });
+
+        buttonAlterarResp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), AlterarResponsavelActivity.class));
+            }
+        });
+
+        buttonRemoverResp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), RemoverResponsavelActivity.class));
+            }
+        });
+
+        buttonListarResp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), ListarResponsavelActivity.class));
+            }
+        });
 
         return view;
 
