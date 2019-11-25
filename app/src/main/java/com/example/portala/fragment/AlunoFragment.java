@@ -1,6 +1,7 @@
 package com.example.portala.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,6 +13,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.portala.R;
+import com.example.portala.activity.FrequenciaActivity;
+import com.example.portala.activity.NotaActivity;
+import com.example.portala.activity.PrincipalActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,8 +24,6 @@ public class AlunoFragment extends Fragment {
 
     private Button buttonNota;
     private Button buttonFrequencia;
-    private NotaFragment notaFragment;
-    private FrequenciaFragment frequenciaFragment;
 
     public AlunoFragment() {
         // Required empty public constructor
@@ -40,20 +42,14 @@ public class AlunoFragment extends Fragment {
         buttonNota.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                notaFragment = new NotaFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.frameConteudoAluno, notaFragment);
-                transaction.commit();
+                startActivity(new Intent(getContext(), NotaActivity.class));
             }
         });
 
         buttonFrequencia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                frequenciaFragment = new FrequenciaFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.frameConteudoAluno, frequenciaFragment);
-                transaction.commit();
+                startActivity(new Intent(getContext(), FrequenciaActivity.class));
             }
         });
 

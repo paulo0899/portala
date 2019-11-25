@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.FrequenciaFragment">
+    tools:context=".fragment.ContatoInstituicaoFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,10 +12,11 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textViewFragmentFrequencia"
+            android:id="@+id/textViewContatoInst"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fragment Frequência"
+            android:text="Desenvolvendo..."
+            android:textColor="@color/colorAccent"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -15,11 +15,11 @@ import com.example.portala.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FrequenciaFragment extends Fragment {
+public class InicioInstituicaoFragment extends Fragment {
 
-    private TextView textViewFrequencia;
+    private TextView textViewInicioInst;
 
-    public FrequenciaFragment() {
+    public InicioInstituicaoFragment() {
         // Required empty public constructor
     }
 
@@ -28,11 +28,12 @@ public class FrequenciaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_frequencia, container, false);
+        View view = inflater.inflate(R.layout.fragment_inicio_instituicao, container, false);
 
-        textViewFrequencia = view.findViewById(R.id.textViewFragmentFrequencia);
+        textViewInicioInst = view.findViewById(R.id.textViewInicioInst);
 
         return view;
+
     }
 
 }

@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.FrequenciaActivity"></activity>
+        <activity android:name=".activity.NotaActivity" />
         <activity android:name=".activity.AlterarSenhaInstituicaoActivity" />
         <activity android:name=".activity.AlterarSenhaActivity" />
         <activity android:name=".activity.LoginInstituicaoActivity" />

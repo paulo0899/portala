@@ -8,22 +8,105 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
 
-        <TextView
-            android:id="@+id/textViewFragmentEvento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="177dp"
-            android:layout_marginTop="291dp"
-            android:layout_marginEnd="176dp"
-            android:layout_marginBottom="292dp"
-            android:text="Fragment Evento"
-            android:textSize="30sp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewEvento"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/common_google_signin_btn_icon_dark_normal" />
+
+                <TextView
+                    android:id="@+id/textViewTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Este é o Título do Evento"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewEvento2"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/common_google_signin_btn_icon_dark_normal" />
+
+                <TextView
+                    android:id="@+id/textViewTitulo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Este é o Título do Evento"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewEvento3"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/common_google_signin_btn_icon_dark_normal" />
+
+                <TextView
+                    android:id="@+id/textViewTitulo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Este é o Título do Evento"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
