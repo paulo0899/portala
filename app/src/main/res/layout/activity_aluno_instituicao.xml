@@ -8,6 +8,7 @@
     tools:context=".activity.AlunoInstituicaoActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -31,40 +32,19 @@
             android:textColor="@color/colorAccent"
             android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/buttonAlterarAluno"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:drawableLeft="@drawable/ic_loop_asset_24dp"
-            android:paddingLeft="10dp"
-            android:text="  Alterar Aluno"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorAccent"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/buttonRemoverAluno"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:drawableLeft="@drawable/ic_remove_asset_24dp"
-            android:paddingLeft="10dp"
-            android:text="  Remover Aluno"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorAccent"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/buttonListarAluno"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:drawableLeft="@drawable/ic_list_asset_24dp"
-            android:paddingLeft="10dp"
-            android:text="  Listar Alunos"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorAccent"
-            android:textSize="18sp" />
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAluno"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

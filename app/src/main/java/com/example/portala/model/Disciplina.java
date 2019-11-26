@@ -1,4 +1,4 @@
-package com.example.portala.classes;
+package com.example.portala.model;
 
 import java.util.ArrayList;
 

@@ -1,12 +1,11 @@
-package com.example.portala.classes;
+package com.example.portala.model;
 
 import java.util.ArrayList;
 
 public class Aluno {
 
-    private String idAluno;
-    private String nomeAluno;
-    private int anoAluno;
+    private String idAluno = "iX64234";
+    private String nomeAluno = "João Carlos";
     private Responsavel responsavel;
     private Turma turma;
     private Instituicao instituicao;
@@ -33,14 +32,6 @@ public class Aluno {
 
     public void setNomeAluno(String nomeAluno) {
         this.nomeAluno = nomeAluno;
-    }
-
-    public int getAnoAluno() {
-        return anoAluno;
-    }
-
-    public void setAnoAluno(int anoAluno) {
-        this.anoAluno = anoAluno;
     }
 
     public Responsavel getResponsavel() {
