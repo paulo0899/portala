@@ -53,7 +53,7 @@ public class AlunoInstituicaoFragment extends Fragment {
         buttonTurma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), TurmaInstituicaoActivity.class));
+                abrirTurmaInstituicao();
             }
         });
 
@@ -73,6 +73,12 @@ public class AlunoInstituicaoFragment extends Fragment {
 
         return view;
 
+    }
+
+    private void abrirTurmaInstituicao(){
+        Intent intent = new Intent(getContext(), TurmaInstituicaoActivity.class);
+        startActivity(intent);
+        onPause();
     }
 
 }

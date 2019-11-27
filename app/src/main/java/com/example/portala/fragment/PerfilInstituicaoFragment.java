@@ -28,11 +28,6 @@ public class PerfilInstituicaoFragment extends Fragment {
     private TextView textViewNomeUsuarioInst;
     private TextView textViewEmailInstituicao;
     private TextView textViewEmailUsuarioInst;
-    private TextView textViewTituloPerfilResp;
-    private Button buttonCadastrarResp;
-    private Button buttonAlterarResp;
-    private Button buttonRemoverResp;
-    private Button buttonListarResp;
     private Button buttonAlterarSenhaInst;
     private Button buttonDeslogarInst;
 
@@ -52,41 +47,8 @@ public class PerfilInstituicaoFragment extends Fragment {
         textViewNomeUsuarioInst = view.findViewById(R.id.textViewNomeUsuarioInt);
         textViewEmailInstituicao = view.findViewById(R.id.textViewEmailInstituicao);
         textViewEmailUsuarioInst = view.findViewById(R.id.textViewEmailUsuarioInst);
-        textViewTituloPerfilResp = view.findViewById(R.id.textViewTituloPerfilInst);
-        buttonCadastrarResp = view.findViewById(R.id.buttonCadastrarResponsavel);
-        buttonAlterarResp = view.findViewById(R.id.buttonAlterarResponsavel);
-        buttonRemoverResp = view.findViewById(R.id.buttonRemoverResponsavel);
-        buttonListarResp = view.findViewById(R.id.buttonListarResponsavel);
         buttonAlterarSenhaInst = view.findViewById(R.id.buttonAlterarSenhaInst);
         buttonDeslogarInst = view.findViewById(R.id.buttonDeslogarInst);
-
-        buttonCadastrarResp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(), CadastrarResponsavelActivity.class));
-            }
-        });
-
-        buttonAlterarResp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(), AlterarResponsavelActivity.class));
-            }
-        });
-
-        buttonRemoverResp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(), RemoverResponsavelActivity.class));
-            }
-        });
-
-        buttonListarResp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(), ListarResponsavelActivity.class));
-            }
-        });
 
         return view;
 

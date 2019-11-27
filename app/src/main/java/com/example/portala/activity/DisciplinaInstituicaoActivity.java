@@ -1,18 +1,20 @@
 package com.example.portala.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import com.example.portala.R;
+import com.example.portala.adapter.AdapterAluno;
+import com.example.portala.adapter.AdapterDisciplina;
 
 public class DisciplinaInstituicaoActivity extends AppCompatActivity {
 
     private Button buttonCadastrarDisciplina;
-    private Button buttonAlterarDisciplina;
-    private Button buttonRemoverDisciplina;
-    private Button buttonListarDisciplina;
+    private RecyclerView recyclerViewDisciplina;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +22,7 @@ public class DisciplinaInstituicaoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_disciplina_instituicao);
 
         buttonCadastrarDisciplina = findViewById(R.id.buttonCadastrarDisciplina);
-        buttonAlterarDisciplina = findViewById(R.id.buttonAlterarDisciplina);
-        buttonRemoverDisciplina = findViewById(R.id.buttonRemoverDisciplina);
-        buttonListarDisciplina = findViewById(R.id.buttonListarDisciplina);
+        recyclerViewDisciplina = findViewById(R.id.recyclerViewDisciplina);
 
         buttonCadastrarDisciplina.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,26 +31,16 @@ public class DisciplinaInstituicaoActivity extends AppCompatActivity {
             }
         });
 
-        buttonAlterarDisciplina.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(DisciplinaInstituicaoActivity.this, AlterarDisciplinaActivity.class));
-            }
-        });
 
-        buttonRemoverDisciplina.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(DisciplinaInstituicaoActivity.this, RemoverDisciplinaActivity.class));
-            }
-        });
 
-        buttonListarDisciplina.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(DisciplinaInstituicaoActivity.this, ListarDisciplinaActivity.class));
-            }
-        });
+        //Confirgurando Adapter
+        AdapterDisciplina adapterDisciplina = new AdapterDisciplina();
+
+        //Configurando RecyclerView
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerViewDisciplina.setLayoutManager(layoutManager);
+        recyclerViewDisciplina.setHasFixedSize(true);
+        recyclerViewDisciplina.setAdapter(adapterDisciplina);
 
     }
 }
