@@ -11,13 +11,8 @@
         android:roundIcon="@mipmap/baby"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
-        <activity android:name=".activity.NotaInstituicaoActivity"></activity>
-        <activity android:name=".activity.RemoverDisciplinaActivity" />
-=======
 
         <activity android:name=".activity.RemoverDisciplinaActivity"></activity>
->>>>>>> branchpaulo
         <activity android:name=".activity.DisciplinaInstituicaoActivity" />
         <activity android:name=".activity.TurmaInstituicaoActivity" />
         <activity android:name=".activity.AlunoInstituicaoActivity" />
