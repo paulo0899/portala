@@ -1,6 +1,5 @@
 package com.example.portala.fragment;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -12,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.portala.R;
+
 import com.example.portala.activity.AlunoInstituicaoActivity;
 import com.example.portala.activity.DisciplinaInstituicaoActivity;
 import com.example.portala.activity.NotaInstituicaoActivity;

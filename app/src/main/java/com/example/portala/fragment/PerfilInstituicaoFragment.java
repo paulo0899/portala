@@ -1,6 +1,5 @@
 package com.example.portala.fragment;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 

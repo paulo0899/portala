@@ -11,8 +11,13 @@
         android:roundIcon="@mipmap/baby"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".activity.NotaInstituicaoActivity"></activity>
         <activity android:name=".activity.RemoverDisciplinaActivity" />
+=======
+
+        <activity android:name=".activity.RemoverDisciplinaActivity"></activity>
+>>>>>>> branchpaulo
         <activity android:name=".activity.DisciplinaInstituicaoActivity" />
         <activity android:name=".activity.TurmaInstituicaoActivity" />
         <activity android:name=".activity.AlunoInstituicaoActivity" />
@@ -36,6 +41,7 @@
         <activity android:name=".activity.AlterarResponsavelActivity" />
         <activity android:name=".activity.CadastrarResponsavelActivity" />
         <activity android:name=".activity.FrequenciaActivity" />
+
         <activity android:name=".activity.NotaActivity" />
         <activity android:name=".activity.AlterarSenhaInstituicaoActivity" />
         <activity android:name=".activity.AlterarSenhaActivity" />
