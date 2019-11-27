@@ -11,17 +11,41 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textViewInicioInst"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Desenvolvendo..."
-            android:textColor="@color/colorAccent"
-            android:textSize="30sp"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/buttonCadastrarResponsavel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:drawableLeft="@drawable/ic_add_asset_24dp"
+                android:paddingLeft="10dp"
+                android:text="  Cadastrar Responsavel"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewResponsavel"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

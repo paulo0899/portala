@@ -14,6 +14,7 @@ import android.widget.Button;
 import com.example.portala.R;
 import com.example.portala.activity.AlunoInstituicaoActivity;
 import com.example.portala.activity.DisciplinaInstituicaoActivity;
+import com.example.portala.activity.NotaInstituicaoActivity;
 import com.example.portala.activity.TurmaInstituicaoActivity;
 
 /**
@@ -24,6 +25,7 @@ public class AlunoInstituicaoFragment extends Fragment {
     private Button buttonAluno;
     private Button buttonTurma;
     private Button buttonDisciplina;
+    private Button buttonNota;
 
     public AlunoInstituicaoFragment() {
         // Required empty public constructor
@@ -39,6 +41,7 @@ public class AlunoInstituicaoFragment extends Fragment {
         buttonAluno = view.findViewById(R.id.buttonAlunoInst);
         buttonTurma = view.findViewById(R.id.buttonTurmaInst);
         buttonDisciplina = view.findViewById(R.id.buttonDisciplinaInst);
+        buttonNota = view.findViewById(R.id.buttonNotaInst);
 
         buttonAluno.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +61,13 @@ public class AlunoInstituicaoFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getContext(), DisciplinaInstituicaoActivity.class));
+            }
+        });
+
+        buttonNota.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), NotaInstituicaoActivity.class));
             }
         });
 

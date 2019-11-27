@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.portala">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/baby"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.RemoverDisciplinaActivity"></activity>
+        <activity android:name=".activity.NotaInstituicaoActivity"></activity>
+        <activity android:name=".activity.RemoverDisciplinaActivity" />
         <activity android:name=".activity.DisciplinaInstituicaoActivity" />
         <activity android:name=".activity.TurmaInstituicaoActivity" />
         <activity android:name=".activity.AlunoInstituicaoActivity" />

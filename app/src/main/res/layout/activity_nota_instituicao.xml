@@ -5,37 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".activity.TurmaInstituicaoActivity">
+    tools:context=".activity.NotaInstituicaoActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout8"
+        android:id="@+id/linearLayout6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:background="@android:color/white"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/buttonCadastrarTurma"
+            android:id="@+id/buttonCadastrarNota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:drawableLeft="@drawable/ic_add_asset_24dp"
             android:paddingLeft="10dp"
-            android:text="  Cadastrar Turma"
+            android:text="  Cadastrar Notas"
             android:textAlignment="textStart"
             android:textColor="@color/colorAccent"
             android:textSize="18sp" />
-
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewTurma"
+        android:id="@+id/recyclerViewNota"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -45,6 +42,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
-
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
 </androidx.constraintlayout.widget.ConstraintLayout>

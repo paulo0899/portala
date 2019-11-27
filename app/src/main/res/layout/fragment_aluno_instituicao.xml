@@ -50,5 +50,17 @@
             android:textAlignment="textStart"
             android:textColor="@color/colorAccent"
             android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonNotaInst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:drawableLeft="@drawable/ic_assessment_assent_24dp"
+            android:paddingLeft="10dp"
+            android:text="  Notas"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
     </LinearLayout>
 </FrameLayout>
