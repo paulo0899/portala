@@ -25,6 +25,13 @@ public class AlunoInstituicaoActivity extends AppCompatActivity {
         buttonCadastrarAluno = findViewById(R.id.buttonCadastrarAluno);
         recyclerViewAluno = findViewById(R.id.recyclerViewAluno);
 
+        buttonCadastrarAluno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), CadastrarAlunoActivity.class));
+            }
+        });
+
         //Confirgurando Adapter
         AdapterAluno adapterAluno = new AdapterAluno();
 
@@ -33,13 +40,6 @@ public class AlunoInstituicaoActivity extends AppCompatActivity {
         recyclerViewAluno.setLayoutManager(layoutManager);
         recyclerViewAluno.setHasFixedSize(true);
         recyclerViewAluno.setAdapter(adapterAluno);
-
-        buttonCadastrarAluno.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), CadastrarAlunoActivity.class));
-            }
-        });
 
     }
 }

@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Turma {
 
-    private String idTurma;
-    private int anoTurma;
-    private String turnoTurma;
+    private String idTurma = "XvdfT34084";
+    private int anoTurma = 5;
+    private String turnoTurma = "Manhã";
     private ArrayList<Disciplina> disciplina;
     private ArrayList<Aluno> aluno;
 

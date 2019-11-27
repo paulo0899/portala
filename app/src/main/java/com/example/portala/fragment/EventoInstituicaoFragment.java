@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +18,7 @@ import com.example.portala.activity.AlterarEventoActivity;
 import com.example.portala.activity.CadastrarEventoActivity;
 import com.example.portala.activity.ListarEventoActivity;
 import com.example.portala.activity.RemoverEventoActivity;
+import com.example.portala.adapter.AdapterEvento;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,9 +26,7 @@ import com.example.portala.activity.RemoverEventoActivity;
 public class EventoInstituicaoFragment extends Fragment {
 
     private Button buttonCriarEvento;
-    private Button buttonAlterarEvento;
-    private Button buttonRemoverEvento;
-    private Button buttonListarEvento;
+    private RecyclerView recyclerViewEvento;
 
     public EventoInstituicaoFragment() {
         // Required empty public constructor
@@ -39,9 +40,8 @@ public class EventoInstituicaoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_evento_instituicao, container, false);
 
         buttonCriarEvento = view.findViewById(R.id.buttonCriarEvento);
-        buttonAlterarEvento = view.findViewById(R.id.buttonAlterarEvento);
-        buttonRemoverEvento = view.findViewById(R.id.buttonRemoverEvento);
-        buttonListarEvento = view.findViewById(R.id.buttonListarEvento);
+        recyclerViewEvento = view.findViewById(R.id.recyclerViewEvento);
+
 
         buttonCriarEvento.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,29 +50,21 @@ public class EventoInstituicaoFragment extends Fragment {
             }
         });
 
-        buttonAlterarEvento.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(), AlterarEventoActivity.class));
-            }
-        });
-
-        buttonRemoverEvento.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(), RemoverEventoActivity.class));
-            }
-        });
-
-        buttonListarEvento.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(), ListarEventoActivity.class));
-            }
-        });
+        configurandoRecyclerView();
 
         return view;
 
+    }
+
+    public void configurandoRecyclerView(){
+        //Confirgurando Adapter
+        AdapterEvento adapterEvento = new AdapterEvento();
+
+        //Configurando RecyclerView
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerViewEvento.setLayoutManager(layoutManager);
+        recyclerViewEvento.setHasFixedSize(true);
+        recyclerViewEvento.setAdapter(adapterEvento);
     }
 
 }

@@ -12,7 +12,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textViewLabelIdAluno"
+            android:id="@+id/textViewLabelIdDisciplina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="6"
@@ -20,14 +20,13 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textViewMatriculaAluno"
+            android:id="@+id/textViewIdDisciplina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingLeft="10dp"
-            android:text="Matricula"
+            android:text="Id"
             android:textSize="18sp" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -37,7 +36,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textViewLabelNomeAluno"
+            android:id="@+id/textViewLabelNomeDisciplina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="6"
@@ -45,7 +44,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textViewNomeAluno"
+            android:id="@+id/textViewNomeDisciplina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -55,5 +54,4 @@
             android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
-
 </LinearLayout>

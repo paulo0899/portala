@@ -3,7 +3,7 @@ package com.example.portala.model;
 public class Evento {
 
     private String idEvento;
-    private String tituloEvento;
+    private String tituloEvento = "Primeiro Evento da Instituição";
     private String descricaoEvento;
     private Instituicao instituicao;
 

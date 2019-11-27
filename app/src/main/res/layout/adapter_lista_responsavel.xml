@@ -12,7 +12,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textViewLabelIdAluno"
+            android:id="@+id/textViewLabelIdResponsavel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="6"
@@ -20,12 +20,12 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textViewMatriculaAluno"
+            android:id="@+id/textViewIdResponsavel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingLeft="10dp"
-            android:text="Matricula"
+            android:text="Id"
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -37,7 +37,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textViewLabelNomeAluno"
+            android:id="@+id/textViewLabelNomeResponsavel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="6"
@@ -45,7 +45,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textViewNomeAluno"
+            android:id="@+id/textViewNomeResponsavel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -56,4 +56,28 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewLabelEmailResponsavel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="E-mail:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewEmailResponsavel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="Email"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+    </LinearLayout>
 </LinearLayout>

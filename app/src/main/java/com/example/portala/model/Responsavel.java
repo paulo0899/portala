@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class Responsavel {
 
-    private String idResponsavel;
-    private String nomeResponsavel;
-    private String senhaResponsavel;
-    private String emailResponsavel;
+    private String idResponsavel = "68TyuIHg";
+    private String nomeResponsavel = "Melo";
+    private String senhaResponsavel = "responsavel";
+    private String emailResponsavel = "responsavel@gmail.com";
     private String fotoResponsavel;
     private ArrayList<Aluno> aluno;
     private Instituicao instituicao;

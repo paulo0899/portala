@@ -1,6 +1,8 @@
 package com.example.portala.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,13 +10,12 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.portala.R;
+import com.example.portala.adapter.AdapterTurma;
 
 public class TurmaInstituicaoActivity extends AppCompatActivity {
 
     private Button buttonCadastrarTurma;
-    private Button buttonAlterarTurma;
-    private Button buttonRemoverTurma;
-    private Button buttonListarTurma;
+    private RecyclerView recyclerViewTurma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +23,7 @@ public class TurmaInstituicaoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_turma_instituicao);
 
         buttonCadastrarTurma = findViewById(R.id.buttonCadastrarTurma);
-        buttonAlterarTurma = findViewById(R.id.buttonAlterarTurma);
-        buttonRemoverTurma = findViewById(R.id.buttonRemoverTurma);
-        buttonListarTurma = findViewById(R.id.buttonListarTurma);
+        recyclerViewTurma = findViewById(R.id.recyclerViewTurma);
 
         buttonCadastrarTurma.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,26 +32,14 @@ public class TurmaInstituicaoActivity extends AppCompatActivity {
             }
         });
 
-        buttonAlterarTurma.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(TurmaInstituicaoActivity.this, AlterarTurmaActivity.class));
-            }
-        });
+        //Configurando Adapter
+        AdapterTurma adapterTurma = new AdapterTurma();
 
-        buttonRemoverTurma.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(TurmaInstituicaoActivity.this, RemoverTurmaActivity.class));
-            }
-        });
-
-        buttonListarTurma.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(TurmaInstituicaoActivity.this, ListarTurmaActivity.class));
-            }
-        });
+        //Configurando RecyclerView
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerViewTurma.setLayoutManager(layoutManager);
+        recyclerViewTurma.setHasFixedSize(true);
+        recyclerViewTurma.setAdapter(adapterTurma);
 
     }
 }
