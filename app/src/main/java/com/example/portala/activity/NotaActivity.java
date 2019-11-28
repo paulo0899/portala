@@ -29,7 +29,7 @@ public class NotaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD:app/src/main/java/com/example/portala/MainActivity.java
+//<<<<<<< HEAD:app/src/main/java/com/example/portala/MainActivity.java
         setContentView(R.layout.activity_main);
 
         Button buttonGaleria = (Button) findViewById(R.id.buttonAdcImgGaleria);
